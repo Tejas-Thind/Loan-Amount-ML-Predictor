@@ -24,6 +24,6 @@ Inconsistent assessment criteria across different applications
 **Categorical Features:** Gender, Credit_History, Self_Employed, Married, Loan_Status, Education, Property_Area  
 **Alphanumeric Features:** Loan_ID  
 
-Plotting the applicant income against the loan amount shows us that from the 0 to slightly above 20000 range, there is generally a positive correlation between applicant income and loan amount. However there are a few outliers, most notably all the way to the right, so let's focus on that.
+Plotting the applicant income against the loan amount shows us that from the 0 to slightly above 20000 range, there is generally a positive correlation between applicant income and loan amount. However there are a few outliers, most notably all the way to the right, so let's focus on that.  
 ![image](https://github.com/user-attachments/assets/56f3d370-f8a4-4449-84c7-88556c842f56)
 
