@@ -28,11 +28,11 @@ The banking industry currently faces challenges in determining appropriate loan 
 Below we can see the correlation heatmap. Applicant and Co-applicant income have the highest correlation with our target variable loan amount. We will explore the correlation heatmap further, once we create new features.  
 ![image](https://github.com/user-attachments/assets/825c3851-8059-4afc-bb03-f9deeab186ab)  
 
-Top Left (Scatter Plot: Applicant Income vs. Loan Amount):
+Top Left (Scatter Plot: Applicant Income vs. Loan Amount):  
 This scatter plot shows that most applicants with incomes below 20,000 qualify for loans under 300. A few outliers with higher incomes or loan amounts stand apart from the main cluster.  
-Top Right (Education vs. Applicant Income):
+Top Right (Education vs. Applicant Income):  
 The box plot highlights that graduates generally earn more than non-graduates, though both groups have outliers with very high incomes.  
-Bottom Left (Dependents vs. Loan Amount):
+Bottom Left (Dependents vs. Loan Amount):  
 This box plot shows how loan amounts vary based on the number of dependents. Applicants with no dependents tend to apply and qualify for smaller loans, while those with 3+ dependents show a wider range of loan amounts, including higher values.  
 ![image](https://github.com/user-attachments/assets/ee00def4-4d2e-4d81-be0d-49bb978433b8)  
 
