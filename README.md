@@ -96,17 +96,17 @@ This section of the code focuses on building, optimizing, and evaluating two mac
  - A Random Forest Regressor is trained as the first model I used.  
  - Random Forest Out-of-Bag Score: 0.9462111841924802 (Internal validation score)  
  - Random Forest MSE: 0.0007744609445800214 (the average of the squared differences between predicted values and actual values)  
- - Random Forest R^2: 0.9303488605074197 (explains variance in loan amounts)  
-
-I chose this model because it provides great predictions due to its ability to handle non-linear relationships and feature importance analysis.  
+ - Random Forest R^2: 0.9303488605074197 (explains variance in loan amounts)
+ - I chose this model because it provides great predictions due to its ability to handle non-linear relationships and feature importance analysis.  
 
 3. Hyperparameter Tuning  
  - I used grid search with a parameter grid to optimize Random Forest hyperparameters (n_estimators, max_depth).  
  - The best-tuned Random Forest I could train achieved an R² score of 0.9318908836437666 on test data.  
 
 4. XGBoost Regressor  
- - An XGBoost Regressor is created with the parameters: objective="reg:squarederror", random_state=0, early_stopping_rounds=3  
- - It is trained and and evaluated, achieving an R² score of 0.9520023051777154 and an MSE score of 0.0005336932079006393, outperforming both Random Forest models.  
+ - An XGBoost Regressor is created with the parameters: objective="reg:squarederror", random_state=0, early_stopping_rounds=3
+ - It was trained and evaluated, achieving an R² score of 0.9520023051777154 and an MSE score of 0.0005336932079006393, outperforming both Random Forest models.
+ - I used XGBoost because it efficiently captures complex relationships in the data, leading to improved prediction accuracy.
 
 5. K-Fold Cross-Validation (Ensures reliable performance across different data splits)  
  - Both Random Forest and XGBoost underwent 5-fold Cross-Validation.  
