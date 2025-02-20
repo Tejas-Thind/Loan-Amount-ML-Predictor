@@ -43,7 +43,7 @@ The following bar chart helps us understand the relationship between employment 
 ![image](https://github.com/user-attachments/assets/73e08689-25f9-4e6a-b5da-226a5d522711)  
 
 This last bar chart highlights how dependents affect loan approval rates, likely due to their impact on financial stability. This can help refine the model by showing how dependents influence loan status outcomes, which affects the loan amount.  
-![image](https://github.com/user-attachments/assets/57bd91ed-9d9e-41bd-ac16-19c06ce4dd5f)  
+![image](https://github.com/user-attachments/assets/3c1a7ddd-faee-401f-8753-5c0169cbbaa0)  
 
 ## Data Cleaning and Preprocessing  
 
