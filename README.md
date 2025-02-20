@@ -94,9 +94,9 @@ This section of the code focuses on building, optimizing, and evaluating two mac
 
 2. Random Forest Regressor  
  - A Random Forest Regressor is trained as the first model I used.  
- - Random Forest Out-of-Bag Score: 0.9462111841924802 (explains variance in loan amounts)  
+ - Random Forest Out-of-Bag Score: 0.9462111841924802 (Internal validation score)  
  - Random Forest MSE: 0.0007744609445800214 (the average of the squared differences between predicted values and actual values)  
- - Random Forest R^2: 0.9303488605074197 (Internal validation score)  
+ - Random Forest R^2: 0.9303488605074197 (explains variance in loan amounts)  
 
 I chose this model because it provides great predictions due to its ability to handle non-linear relationships and feature importance analysis.  
 
