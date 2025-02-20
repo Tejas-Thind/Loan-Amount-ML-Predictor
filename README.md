@@ -65,3 +65,54 @@ This last bar chart highlights how dependents affect loan approval rates, likely
  - A new column, DTI_Ratio, is created by dividing the MonthlyLoanPayment by the TotalHouseholdIncome.  
  - Purpose: The DTI ratio measures how much of the applicant's income goes toward debt payments, a key metric for determining loan eligibility and risk.
 
+The new features enhance the dataset by introducing derived metrics that capture complex relationships between income, debt, and repayment terms.  
+By improving feature diversity and relevance to the target attribute, these new features help the model better understand patterns in the data and make more accurate predictions about loan amounts.  
+![image](https://github.com/user-attachments/assets/b56d1424-e360-445a-be9b-409d17073c4d)  
+
+### One-Hot Encoding  
+Machine learning models cannot process categorical data directly, so this transformation ensures that the model can interpret and utilize these features effectively.  
+How One-Hot Encoding Helps:  
+ - Preserves all category information without introducing ordinal relationships (e.g., one category being "greater" than another).  
+ - Makes the dataset fully numerical, which is the required type of data to be fed to most machine learning algorithms.
+
+### Addressing the Skewness  
+Square Root Transformation:  
+The ApplicantIncome, CoapplicantIncome, and LoanAmount columns are transformed using the square root function to reduce skewness and make their distributions closer to normal.  
+Many machine learning models perform better with normally distributed data, as it helps improve model stability and predictive performance.  
+
+Histograms with KDE Plots:  
+Before addressing the skewness:  
+![image](https://github.com/user-attachments/assets/725f4b5d-9dbf-46ab-8a85-68cbd4865fdc)  
+After addressing the skewness:  
+![image](https://github.com/user-attachments/assets/a20be682-bfba-40c7-b157-75203e75f0e4)  
+
+## Model Development  
+This section of the code focuses on building, optimizing, and evaluating two machine-learning models to predict loan amounts.  
+
+1. Data Preparation  
+ - The dataset is split into features (X) and the target variable (y), where LoanAmount is the target.  
+ - A Min-Max Scaler is applied to scale the features to a range between 0 and 1, this ensures all features contribute equally to the model's performance.
+
+2. Random Forest Regressor  
+ - A Random Forest Regressor is trained as the first model I used.  
+ - Random Forest Out-of-Bag Score: 0.9462111841924802 (explains variance in loan amounts)  
+ - Random Forest MSE: 0.0007744609445800214 (the average of the squared differences between predicted values and actual values)  
+ - Random Forest R^2: 0.9303488605074197 (Internal validation score)  
+
+I chose this model because it provides great predictions due to its ability to handle non-linear relationships and feature importance analysis.  
+
+3. Hyperparameter Tuning  
+ - I used grid search with a parameter grid to optimize Random Forest hyperparameters (n_estimators, max_depth).  
+ - The best-tuned Random Forest I could train achieved an R² score of 0.9318908836437666 on test data.  
+
+4. XGBoost Regressor  
+ - An XGBoost Regressor is created with the parameters: objective="reg:squarederror", random_state=0, early_stopping_rounds=3  
+ - It is trained and and evaluated, achieving an R² score of 0.9520023051777154 and an MSE score of 0.0005336932079006393, outperforming both Random Forest models.  
+
+5. K-Fold Cross-Validation (Ensures reliable performance across different data splits)  
+ - Both Random Forest and XGBoost underwent 5-fold Cross-Validation.  
+ - This process splits the data into five subsets to evaluate model consistency.  
+ - Mean R² scores: Random Forest: 0.9468636760585474, XGBoost: 0.9488184858822706, indicating that both models performed strongly.  
+
+## Conclusion
+By comparing metrics like R², MSE, and cross-validation scores, XGBoost emerges as the better-performing model for predicting loan amounts. This process demonstrates a detailed approach to transforming raw data into accurate predictions by building a reliable machine-learning pipeline for loan amount prediction. By training, tuning, and evaluating models like Random Forest and XGBoost, the pipeline effectively predicts loan amounts with high accuracy. The integration of cross-validation and hyperparameter tuning ensures reliable performance. Overall, this project was very enjoyable to build and helped me learn a lot about the core concepts of data science and machine learning😃.  
