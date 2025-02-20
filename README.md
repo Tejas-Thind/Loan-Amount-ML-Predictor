@@ -39,7 +39,7 @@ This box plot shows how loan amounts vary based on the number of dependents. App
 The following scatter plot helps identify how loan term preferences correlate with loan amount. This is crucial for understanding customer behaviour and predicting loan amounts based on term length.  
 ![image](https://github.com/user-attachments/assets/a2f658c1-5151-4ce6-ad72-155258dcbda4)  
 
-The following bar chart helps us understand the relationship between employment type and credit history is critical for predicting loan eligibility, as credit history is a key factor in determining approval.  
+The following bar chart helps us understand the relationship between employment type and credit history, which is critical for predicting loan eligibility, as credit history is a key factor in determining approval.  
 ![image](https://github.com/user-attachments/assets/73e08689-25f9-4e6a-b5da-226a5d522711)  
 
 This last bar chart highlights how dependents affect loan approval rates, likely due to their impact on financial stability. This can help refine the model by showing how dependents influence loan status outcomes, which affects the loan amount.  
