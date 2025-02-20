@@ -65,8 +65,7 @@ This last bar chart highlights how dependents affect loan approval rates, likely
  - A new column, DTI_Ratio, is created by dividing the MonthlyLoanPayment by the TotalHouseholdIncome.  
  - Purpose: The DTI ratio measures how much of the applicant's income goes toward debt payments, a key metric for determining loan eligibility and risk.
 
-The new features enhance the dataset by introducing derived metrics that capture complex relationships between income, debt, and repayment terms.  
-By improving feature diversity and relevance to the target attribute, these new features help the model better understand patterns in the data and make more accurate predictions about loan amounts.  
+The new features enhance the dataset by introducing derived metrics that capture complex relationships between income, debt, and repayment terms. By improving feature diversity and relevance to the target attribute, these new features help the model better understand patterns in the data and make more accurate predictions about loan amounts.  
 ![image](https://github.com/user-attachments/assets/b56d1424-e360-445a-be9b-409d17073c4d)  
 
 ### One-Hot Encoding  
